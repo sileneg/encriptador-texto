@@ -4,53 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de Texto</title>
-    <link rel="shortcut icon" href="images/logo-encriptar.png" type="image/x-icon" >
+    <link rel="shortcut icon" href="images/logo-head">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <main>
        <div class="titulo">
-        <h1>Encriptador de Texto</h1>
+        <h1 class="titulo-encriptador">Encriptador de Texto</h1>
        </div>
-        <div class="contenedor">
+            <div class="contenedor">
             <div class="encriptador-texto">
                 <textarea name="texo" id="texto" class="texto-encriptado" placeholder="Digite el texto a encriptar o desencriptar"></textarea>
-            </div>
+           
+                <div id="mensaje-error" class="mensaje-error" style="display:none;"></div>
 
-            <div class="restricciones">
-                <p>El texto sólo debe incluir minúsculas y texto sin acentuación</p>
-            </div>
+                <div class="restricciones">
+                    <p>El texto sólo debe incluir minúsculas y texto sin acentuación</p>
+                </div>
 
-            <div class="botones-encriptar">
-                <button class="encriptar" type="button" onclick="fnencriptar()">Encriptar</button>
-                <button class="desencriptar" type="button" onclick="fndesencriptar()">Desencriptar</button>
-            </div>
-       
-            <div class="text-encriptado">
-                <img src="images/Muñeco.png" alt="imgen-no-encontrado" id="muneco">
-                <div class="mensaje-encriptar" id="mensaje-encrip">
-                    <h2 id="titulo-mensaje">Ningún mensaje ha sido encontrado</h2>
-                    <p id="texto-inicial">Ingresa el texto que deseas encriptar o desencriptar</p>
-                    <textarea name="mensaje" id="mensaje" class="mensaje" cols="25" rows="15"></textarea>
-                    <input type="button" class="copiar-texto" value="copiar" onclick="fncopiar()">
+                <div class="botones-encriptar">
+                    <button class="encriptar" type="button" onclick="fnencriptar()">Encriptar</button>
+                    <button class="desencriptar" type="button" onclick="fndesencriptar()">Desencriptar</button>
+                </div>
+
+                <div class="text-encriptado" id="tex-encrip">
+                    <img src="images/muneco.png" alt="imagen-no-encontrado" id="muneco">
+                    <div class="mensaje-encriptar" id="mensaje-encrip">
+                        <h2 id="titulo-mensaje">Ningún mensaje ha sido encontrado</h2>
+                        <p id="texto-inicial">Ingresa el texto que deseas encriptar o desencriptar</p>
+                        <input type="button" class="copiar-texto" value="Copiar" onclick="fncopiar()">
+                    </div>
                 </div>
             </div>
-     </div>
-
+        </div>
     </main>
 
     <footer class="footer">
-        <div class="footer-content" id="footer-content">
+        <div class="footer-contenedor" id="footer-contenedor">
             <div class="contact-info">
                 <p>Silene González Quiroz</p>
                 <p>Teléfono: 312 544 03 97</p>
                 <p>Email: silenegonzalezquiroz@gmail.com</p>
             </div>
-            <div class="social-icons">
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-instagram"></a>
-                <a href="#" class="fa fa-linkedin"></a>
+            <div class="social-icons" id="text-encrip">
+                <a href="https://github.com/sileneg" class="fab fa-github" target="_blank"></a>
+                <a href="https://twitter.com/@SileneGQuiroz" class="fab fa-twitter" target="_blank"></a>
+                <a href="https://instagram.com/silgonqui" class="fab fa-instagram" target="_blank"></a>
+                <a href="https://www.linkedin.com/in/silene-gonz%C3%A1lez-quiroz/" class="fab fa-linkedin" target="_blank"></a>
             </div>
             <div class="copyright">
                 &copy; 2024 Encriptador de Texto. Todos los derechos reservados.

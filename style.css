@@ -11,36 +11,42 @@ html, body {
 
 .titulo{
     width: 100vw;
-    height: 7vh;
-    background-color: #0A3871;
+    height: 9vh;
+    background-color: #371b7a;
     color: #fff;
 }
 
 .titulo-encriptador{
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 12px;
 }
 
 .contenedor{
     position: relative;
     width: 100vw;
     height: 75vh;
-    background-color: #E9ECF8;
-
+    background-color: #ffe0ff;
 }
 
-.texto-encriptado{
+.texto-encriptado {
     position: absolute;
     width: 42%;
     height: 50%;
     left: 12%;
     top: 15%;
+    border:3px solid #a9acaf;
+    box-shadow: 0rem 1.5rem 2rem -0.5rem rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;    
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 1.5rem;
-    background-color: #E9ECF8;
+    background-color: #f8dbfe;
     line-height: 150%;
+    padding: 0.5rem;
+    box-sizing: border-box; 
+    text-align: left;
 }
 
 .texto-encriptado::placeholder{
@@ -51,7 +57,6 @@ html, body {
 
 .texto-encriptado:focus, .texto-encriptado:active {
     outline: none;
-    border: none;
 }
 
 .restricciones{
@@ -64,7 +69,6 @@ html, body {
     padding: 0;
     left: 12%;
     top: 67%;
-
 }
 
 .restricciones p{
@@ -95,9 +99,10 @@ html, body {
     align-items: center;
     justify-content: center;
     border-radius:  50px 15px 50px;
+    border: 5px solid #c472d9;
     padding: 1rem;
     width: 25%;
-    background-color: #0A3871;
+    background-color:#371b7a;
     color: #E9ECF8;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.25rem;
@@ -105,7 +110,6 @@ html, body {
     font-style: normal;
     text-align: center;
     line-height: 1.1875rem;
-    border: 3px solid #343A40;
     gap: 0.5rem;
  }
 
@@ -116,7 +120,7 @@ html, body {
     box-sizing: border-box;
     padding: 1rem;
     width: 25%;
-    background-color: #AAB2D5;
+    background-color: #f8dbfe;
     color: #0A3871;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.25rem;
@@ -125,43 +129,41 @@ html, body {
     text-align: center;
     line-height: 1.1875rem;
     gap: 0.5rem;
-    border: 3px solid #0A3871;
+    border: 5px solid #0A3871;
  }
 
  .encriptar:hover, .desencriptar:hover{
     margin: 0.5%;
     width: 22%;
     padding: 0.75rem;
-    box-sizing: border-box; /* Incluye padding y border en el ancho total */
-
+    box-sizing: border-box; 
  }
 
-.text-encriptado{
+ .text-encriptado {
     position: absolute;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center; 
     width: 22%;
     height: 90%;
     left: 65%;
-    top:5% ;
+    top: 5%;
     background-color: #fff;
-    box-shadow: 0rem  1.5rem 2rem -0.5rem  rgba(0, 0, 0, 0.5);
+    box-shadow: 0rem 1.5rem 2rem -0.5rem rgba(0, 0, 0, 0.5);
     border-radius: 1.5rem;
+    padding: 1rem;
 }
 
-.mensaje-encriptar{
-    position: absolute;
+.mensaje-encriptar {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    justify-content: center; 
     width: 100%;
-    padding: 0.25rem;
-    top: 63%;
     gap: 1rem;
     text-align: center;
 }
-
 
 .mensaje-encriptar h2{
     text-align: center;
@@ -172,8 +174,8 @@ html, body {
     line-height: 120%;
     color: #343A40;
     opacity: 0.8;
-    width: 60%;
-
+    width: 100%;
+    margin: 0;
 }
 
 .mensaje-encriptar p{
@@ -185,42 +187,44 @@ html, body {
     line-height: 150%;
     color: #495057;
     opacity: 0.8;
-    width: 60%;
+    width: 100%;
+    margin: 0;
 }
 
-.copiar-texto{
-    align-items: center;
+.copiar-texto {
+    align-self: center; 
     justify-content: center;
-    border-radius:  50px 15px 50px;
+    border-radius: 50px 15px 50px;
     padding: 0.75rem;
-    width: 35%;
-    background-color: #AAB2D5;
+    width: 50%;
+    background-color:#f8dbfe;
     color: #0A3871;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.25rem;
     font-weight: bold;
-    font-style: normal;
     text-align: center;
     line-height: 1rem;
-    border: 3px solid #0A3871;
+    border: 5px solid #0A3871;
+    margin-top: 2rem; 
+    transition: none;
 }
 
 .copiar-texto:hover{
     margin: 0.5%;
-    width: 28%;
+    width: 45%;
     padding: 0.75rem;
     box-sizing: border-box;
 }
 
 .text-encriptado img{
-    position: absolute;
-    width: 90%;
-    height: 50%;
-    top: 10%;
+    display: block;
+    width: 100%;
+    max-height: 50%; 
+    transition: display 0.3s ease-in-out;
 }
 
 .footer-contenedor {
-    background-color: #0A3871;
+    background-color:#371b7a;
     color: #fff;
     padding: 1rem;
     text-align: center;
@@ -255,6 +259,7 @@ html, body {
     font-size: 1rem; 
     font-weight: bold;
     top:5%;
+    margin: 3px;
 }
 
 @media (max-width: 48em){
@@ -264,19 +269,19 @@ html, body {
     }
     
     .contenedor{
+        width: 100%;
         display: flex;
         flex-direction: row;
-        min-height: calc(102vh - 7vh - 15vh); /* Asegurar que contenedor tome el espacio necesario */
+        min-height: calc(102vh - 7vh - 15vh); 
     }
 
     .encriptador-texto{
-        width: 100%;
+        width: 90%;
     }
 
     .texto-encriptado{
-        width: 80%;
+        width: 77%;
         height: 45%;
-        left: 10%;
         top: 5%;
     }
 
@@ -326,13 +331,13 @@ html, body {
     }
 
     .copiar-texto{
-        width: 48%;
+        width: 40%;
         top: 0;
     }
     
     .copiar-texto:hover{
         margin: 0.3%;
-        width: 46%;
+        width: 35%;
         padding: 0.75rem;
     }
     
@@ -345,7 +350,7 @@ html, body {
 
 @media (max-width: 30em){
     .titulo{
-        width: 100%;
+       width: 100%;
        height: 6%;
     }
     
@@ -353,27 +358,28 @@ html, body {
         width: 100%;
         display: flex;
         flex-direction: row;
-        min-height: calc(110vh - 7vh - 5vh); /* Asegurar que contenedor tome el espacio necesario */
+        min-height: calc(110vh - 7vh - 5vh); 
     }
 
     .encriptador-texto{
-        width: 100%;
+        width: 80%;
     }
 
     .texto-encriptado{
         width: 80%;
         height: 45%;
         left: 10%;
-        top: 5%;
+        top: 2%;
     }
 
     .restricciones{
         width: 80%;
         left: 10%;
-        top: 50%;
+        top: 48%;
     }
 
     .restricciones p{
+        width: 80%;
         font-size: 0.75rem;
     }
 
@@ -382,7 +388,7 @@ html, body {
         align-items: center;
         width: 80%;
         left: 10%;
-        top: 52%;
+        top: 53%;
     }
 
     .encriptar, .desencriptar{
@@ -404,9 +410,9 @@ html, body {
 
     .text-encriptado{
         width: 80%;
-        height: 35%;
+        height: 34%;
         left: 10%;
-        top: 64%;
+        top: 65%;
     }
 
     .mensaje-encriptar{
@@ -433,10 +439,9 @@ html, body {
     }
     
     .footer-contenedor{
-        width: 100%;
+        width:100%;
         height: 5%;
         left: 10%;
         min-height: calc(10vh - 7vh - 5vh);
-
     }
 }
